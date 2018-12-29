@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQery Drum kit</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="keys" tabindex="1">
+	<div data-key="65" class='key'>
+		<kbd>A</kbd>
+		<span class="sound">До</span>
+		</div>
+
+		<div data-key="83" class='key'>
+		<kbd>S</kbd>
+		<span class="sound">Ре</span>
+		</div>
+		<div data-key="68" class='key'>
+		<kbd>D</kbd>
+		<span class="sound">Ми</span>
+		</div>
+		<div data-key="70" class='key'>
+		<kbd>F</kbd>
+		<span class="sound">Фа</span>
+		</div>
+		<div data-key="71" class='key'>
+		<kbd>G</kbd>
+		<span class="sound">Соль</span>
+		</div>
+		<div data-key="72" class='key'>
+		<kbd>H</kbd>
+		<span class="sound">Ля</span>
+		</div>
+		<div data-key="74" class='key'>
+		<kbd>J</kbd>
+		<span class="sound">Си</span>
+		</div>
+		<div data-key="75" class='key'>
+		<kbd>K</kbd>
+		<span class="sound">До</span>
+		</div>
+		<div data-key="76" class='key'>
+		<kbd>L</kbd>
+		<span class="sound">Ре</span>
+		</div>
+		</div>
+
+
+
+	<audio data-key="65"  src="sounds/clarinet_A3_025_piano_normal.mp3"></audio>
+	<audio data-key="83" src="sounds/clarinet_As3_025_piano_normal.mp3"></audio>
+	<audio data-key="68" src="sounds/clarinet_B3_025_piano_normal.mp3"></audio>
+	<audio data-key="70" src="sounds/clarinet_C4_025_piano_normal.mp3"></audio>
+	<audio data-key="71" src="sounds/clarinet_D3_025_piano_normal.mp3"></audio>
+	<audio data-key="72" src="sounds/clarinet_E3_025_piano_normal.mp3"></audio>
+	<audio data-key="74" src="sounds/clarinet_F3_025_piano_normal.mp3"></audio>
+	<audio data-key="75" src="sounds/clarinet_Fs3_025_piano_normal.mp3"></audio>
+	<audio data-key="76" src="sounds/clarinet_G3_025_piano_normal.mp3"></audio>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+	$(function() {
+$(this).keydown(function(event){
+	var key= $(this).find('.key[data-key='+event.which+']');
+	var audio =$('audio[data-key='+event.which+']')[0];
+	key.toggleClass('playing');
+	$(this).find('audio[data-key='+event.which+']').autoplay;
+	audio.play()
+	audio.currentTime=0;
+});
+$(this).keyup(function(event){
+	var key= $(this).find('.key[data-key='+event.which+']');
+	var audio =$('audio[data-key='+event.which+']')[0];
+	key.toggleClass('playing');
+	$(this).find('audio[data-key='+event.which+']').autoplay;
+	audio.stop();
+});
+	});
+
+
+
+</script>
+</body>
+</html>
