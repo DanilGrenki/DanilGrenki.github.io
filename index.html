@@ -59,24 +59,7 @@
 	<audio data-key="76" src="sounds/clarinet_G3_025_piano_normal.mp3"></audio>
 
 <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script>
-	$(function() {
-$(this).keydown(function(event){
-	var key= $(this).find('.key[data-key='+event.which+']');
-	var audio =$('audio[data-key='+event.which+']')[0];
-	key.toggleClass('playing');
-	$(this).find('audio[data-key='+event.which+']').autoplay;
-	audio.play()
-	audio.currentTime=0;
-});
-$(this).keyup(function(event){
-	var key= $(this).find('.key[data-key='+event.which+']');
-	var audio =$('audio[data-key='+event.which+']')[0];
-	key.toggleClass('playing');
-	$(this).find('audio[data-key='+event.which+']').autoplay;
-	audio.stop();
-});
-	});
+<script src="main.js">
 
 
 
