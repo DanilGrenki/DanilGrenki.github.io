@@ -24,10 +24,9 @@
 	key.removeClass('playing');
 	$(this).find('audio[data-key='+event.which+']').autoplay;
 	audio.stop();
-
-
 });
 	});
+	
 
 	 $( ".key" )
   .mouseup(function(event) {
@@ -36,6 +35,10 @@
   })
   .mousedown(function(event) {
     $( this ).addClass('playing');
+  });
+  $( ".key" )
+  .mouseout(function(event) {
+    $( this ).removeClass('playing');
   });
 
  $ (function() {
