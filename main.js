@@ -41,6 +41,11 @@
     $( this ).removeClass('playing');
   });
 
+  $( ".key" )
+  .mousemove(function(event) {
+    $( this ).addClass('playing');
+  });
+
  $ (function() {
  $( ".A" )
   .mousedown(function(event) {
@@ -95,3 +100,56 @@ $( ".H" )
 })
    
   
+
+  $ (function() {
+ $( ".A" )
+  .mousemove(function(event) {
+    $('#A').get(0).play().currentTime=0;
+  })
+  $( ".W" )
+  .mousemove(function(event) {
+    $('#W').get(0).play().currentTime=0;
+  })
+  $( ".S" )
+  .mousemove(function(event) {
+    $('#S').get(0).play().currentTime=0;
+  })
+  $( ".D" )
+  .mousemove(function(event) {
+    $('#D').get(0).play().currentTime=0;
+  })
+  $( ".R" )
+  .mousemove(function(event) {
+    $('#R').get(0).play().currentTime=0;
+  })
+  $( ".F" )
+  .mousemove(function(event) {
+    $('#F').get(0).play().currentTime=0;
+  })
+
+  $( ".Y" )
+  .mousemove(function(event) {
+    $('#Y').get(0).play().currentTime=0;
+  })
+  $( ".G" )
+  .mousemove(function(event) {
+    $('#G').get(0).play().currentTime=0;
+  })
+  $( ".U" )
+  .mousemove(function(event) {
+    $('#U').get(0).play().currentTime=0;
+  })
+$( ".H" )
+  .mousemove(function(event) {
+    $('#H').get(0).play().currentTime=0;
+  })
+  $( ".O" )
+  .mousemove(function(event) {
+    $('#O').get(0).play().currentTime=0;
+  })
+  $( ".J" )
+  .mousemove(function(event) {
+    $('#J').get(0).play().currentTime=0;
+  })
+
+})
