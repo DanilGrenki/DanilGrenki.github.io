@@ -25,6 +25,7 @@
 	$(this).find('audio[data-key='+event.which+']').autoplay;
 	audio.stop();
 
+
 });
 	});
 
@@ -37,53 +38,57 @@
     $( this ).addClass('playing');
   });
 
- 
+ $ (function() {
  $( ".A" )
-  .mouseup(function(event) {
-  	$('#A').get(0).play().currentTime=1;
+  .mousedown(function(event) {
+  	$('#A').get(0).play().currentTime=0;
   })
-  $( ".B" )
-  .mouseup(function(event) {
-  	$('#B').get(0).play().currentTime=1;
+  $( ".W" )
+  .mousedown(function(event) {
+  	$('#W').get(0).play().currentTime=0;
   })
-  $( ".C" )
-  .mouseup(function(event) {
-  	$('#C').get(0).play().currentTime=1;
+  $( ".S" )
+  .mousedown(function(event) {
+  	$('#S').get(0).play().currentTime=0;
   })
   $( ".D" )
-  .mouseup(function(event) {
-  	$('#D').get(0).play().currentTime=1;
+  .mousedown(function(event) {
+  	$('#D').get(0).play().currentTime=0;
   })
-  $( ".E" )
-  .mouseup(function(event) {
-  	$('#E').get(0).play().currentTime=1;
+  $( ".R" )
+  .mousedown(function(event) {
+  	$('#R').get(0).play().currentTime=0;
   })
   $( ".F" )
-  .mouseup(function(event) {
-  	$('#F').get(0).play().currentTime=1;
+  .mousedown(function(event) {
+  	$('#F').get(0).play().currentTime=0;
   })
 
+  $( ".Y" )
+  .mousedown(function(event) {
+  	$('#Y').get(0).play().currentTime=0;
+  })
   $( ".G" )
-  .mouseup(function(event) {
-  	$('#G').get(0).play().currentTime=1;
+  .mousedown(function(event) {
+  	$('#G').get(0).play().currentTime=0;
   })
-  $( ".H" )
-  .mouseup(function(event) {
-  	$('#H').get(0).play().currentTime=1;
+  $( ".U" )
+  .mousedown(function(event) {
+  	$('#U').get(0).play().currentTime=0;
   })
-  $( ".K" )
-  .mouseup(function(event) {
-  	$('#K').get(0).play().currentTime=1;
+$( ".H" )
+  .mousedown(function(event) {
+  	$('#H').get(0).play().currentTime=0;
+  })
+  $( ".O" )
+  .mousedown(function(event) {
+  	$('#O').get(0).play().currentTime=0;
+  })
+  $( ".J" )
+  .mousedown(function(event) {
+  	$('#J').get(0).play().currentTime=0;
   })
 
+})
    
-
   
-var repeat = false;
-el.addEventListener("keyup", function() { repeat = false; });
-el.addEventListener("keydown", function() {
-  if (!repeat) {
-    
-    repeat = true;
-  }
-});
