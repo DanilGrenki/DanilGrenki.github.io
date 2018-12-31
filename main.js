@@ -1,9 +1,9 @@
-	var repeat = false;
+	/*var repeat = false;*/
 	
 	$ (function() {
    $(this).keydown(function(event){
 
-if (!repeat) {
+/*if (!repeat) {*/
 	var key= $(this).find('.key[data-key='+event.which+']');
 	key.addClass('playing');
 	var audio =$('audio[data-key='+event.which+']')[0];
@@ -11,14 +11,14 @@ if (!repeat) {
 	audio.play()
 	audio.currentTime=0;
 	
- repeat = true;}
+/* repeat = true;}*/
   
 
 });
    
 
   $(this).keyup(function(event){
- 	 repeat = false; 
+ 	/* repeat = false; */
 	var key= $(this).find('.key[data-key='+event.which+']');
 	var audio =$('audio[data-key='+event.which+']')[0];
 	key.removeClass('playing');
